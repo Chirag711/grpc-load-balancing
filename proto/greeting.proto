@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package greeting;
+
+option go_package = "grpc-load-balancing/pb";
+
+service GreetingService {
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+}
